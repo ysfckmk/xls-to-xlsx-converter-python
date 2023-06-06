@@ -9,7 +9,7 @@ def kill_process(process_name):
 
 # Function to convert XLS files to XLSX format
 def convert_xls_to_xlsx(folder_path):
-    kill_process("excel.exe")  # Kill any running Excel processes
+    # kill_process("excel.exe")  # Kill any running Excel processes
     os.chdir(folder_path)  # Change directory to the specified folder path
     for file in glob.glob("*.xls"):  # Loop through each XLS file in the folder
         xls_file = pd.ExcelFile(file, engine='xlrd')  # Read the XLS file using xlrd engine
